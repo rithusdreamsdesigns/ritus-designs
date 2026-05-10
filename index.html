@@ -645,7 +645,7 @@ function parseCSV(text) {
 function driveImg(url) {
   if (!url) return "";
   const m = url.match(/[-\w]{25,}/);
-  return m ? `https://drive.google.com/uc?export=view&id=${m[0]}` : url;
+  return m ? `https://drive.google.com/thumbnail?id=${m[0]}&sz=w800` : url;
 }
 
 // ─── GALLERY ────────────────────────────────────────────────────────────
