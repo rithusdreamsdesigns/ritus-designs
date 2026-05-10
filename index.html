@@ -614,6 +614,7 @@
 // 1. IMAGE GALLERY — Create a Google Sheet with one header: "Image"
 //    Paste Drive sharing links under it. Then publish to web as CSV.
 const IMAGE_SHEET_ID  = "1UvIM1l3-pFY_lj_EGzuwKWfwFiCaeseI";
+const IMAGE_GID       = "643822744";
 
 // 2. MEHNDI PRICES (already set from your shared sheet)
 const MEHNDI_SHEET_ID = "1b1GFXb1LMySr-swJ2o75eUmet80Zuvsa";
@@ -667,7 +668,7 @@ async function loadGallery() {
   }
 
   try {
-    const res  = await fetch(csvUrl(IMAGE_SHEET_ID));
+    const res  = await fetch(csvUrl(IMAGE_SHEET_ID, IMAGE_GID));
     const rows = parseCSV(await res.text()).slice(1); // skip header "Image"
 
     allImages = rows
