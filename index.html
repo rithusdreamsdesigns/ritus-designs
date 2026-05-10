@@ -748,7 +748,7 @@ async function loadPrices(sheetId, gid, containerId) {
       if (!name) return;
       const row = document.createElement("div");
       row.className = "price-row";
-      row.innerHTML = `<span class="price-name">${name}</span><span class="price-amount">${price}</span>`;
+      row.innerHTML = `<span class="price-name">${name}</span><span class="price-amount">₹${price}</span>`;
       el.appendChild(row);
     });
   } catch(e) {
