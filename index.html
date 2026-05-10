@@ -603,7 +603,7 @@
 </section>
 
 <footer>
-  &copy; 2025 Ritu's Dreams & Designs &nbsp;·&nbsp; Tiruppur &nbsp;·&nbsp; All rights reserved
+  &copy; <span id="yr"></span> Ritu's Dreams & Designs &nbsp;·&nbsp; Tiruppur &nbsp;·&nbsp; All rights reserved
 </footer>
 
 <script>
@@ -625,7 +625,7 @@ const SAREE_SHEET_ID  = "1-sN788bJlKpu6CtFnJLjmfbbkF__dzpc";
 const SAREE_GID       = "1403088045";
 
 // ═══════════════════════════════════════════════════════════════════════
-
+document.getElementById("yr").textContent = new Date().getFullYear();
 function csvUrl(id, gid) {
   return `https://docs.google.com/spreadsheets/d/${id}/export?format=csv&gid=${gid || 0}`;
 }
