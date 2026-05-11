@@ -529,6 +529,32 @@ Ritu's Dreams and Designs">
     .prices-wrap { grid-template-columns: 1fr; }
     .gallery-grid { padding: 0 20px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
   }
+  /* ─── WHY CHOOSE US ─── */
+  #why { background: linear-gradient(160deg, #FDF5E6 0%, #F5E8D0 100%); padding-bottom: 80px; }
+  .why-grid { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+  .why-card { flex: 0 0 200px; text-align: center; padding: 32px 20px; background: white; border: 1px solid var(--ivory-dark); border-bottom: 3px solid var(--gold); box-shadow: 0 4px 16px rgba(92,26,46,0.05); transition: transform 0.3s; }
+  .why-card:hover { transform: translateY(-5px); }
+  .why-icon { font-size: 2.2rem; margin-bottom: 14px; }
+  .why-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--burgundy); margin-bottom: 8px; }
+  .why-desc { font-size: 0.9rem; color: var(--text-mid); line-height: 1.6; }
+
+  /* ─── OCCASIONS ─── */
+  #occasions { background: var(--ivory); padding-bottom: 80px; }
+  .occasions-grid { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; max-width: 900px; margin: 0 auto; padding: 0 24px; }
+  .occasion-chip { padding: 14px 28px; background: white; border: 1px solid var(--ivory-dark); border-left: 3px solid var(--gold); font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--burgundy); box-shadow: 0 3px 12px rgba(92,26,46,0.06); transition: all 0.3s; cursor: default; }
+  .occasion-chip:hover { background: var(--burgundy); color: white; border-color: var(--burgundy); transform: translateY(-3px); }
+
+  /* ─── PRODUCTS ─── */
+  #products { background: var(--white); padding-bottom: 80px; }
+  .products-wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+  .products-intro { text-align: center; font-size: 1.1rem; color: var(--text-mid); font-style: italic; margin-bottom: 40px; line-height: 1.8; }
+  .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+  .product-card { background: white; border: 1px solid var(--ivory-dark); border-top: 3px solid var(--burgundy); padding: 24px 20px; box-shadow: 0 3px 14px rgba(92,26,46,0.06); transition: transform 0.3s, box-shadow 0.3s; text-align: center; }
+  .product-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(92,26,46,0.12); }
+  .product-icon { font-size: 1.8rem; margin-bottom: 10px; }
+  .product-name { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--burgundy); line-height: 1.4; }
+  .products-note { text-align: center; margin-top: 32px; font-size: 1rem; color: var(--text-mid); font-style: italic; }
+  .products-note a { color: var(--burgundy); text-decoration: none; font-weight: 500; }
 </style>
 </head>
 <body>
@@ -537,9 +563,11 @@ Ritu's Dreams and Designs">
 <nav>
   <div class="nav-brand">Ritu's Dreams & Designs</div>
   <ul class="nav-links">
+    <li><a href="#why">Why Us</a></li>
     <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#occasions">Occasions</a></li>
+    <li><a href="#products">Products</a></li>
     <li><a href="#prices">Prices</a></li>
-    <li><a href="#booking">How to Book</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -561,6 +589,21 @@ Ritu's Dreams and Designs">
   </div>
 </section>
 
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div class="section-header">
+    <p class="section-label">Our Promise</p>
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card"><div class="why-icon">🌿</div><div class="why-title">100% Natural Mehndi</div><div class="why-desc">Pure henna, no chemicals. Safe for all skin types including children</div></div>
+    <div class="why-card"><div class="why-icon">❌</div><div class="why-title">No Chemicals</div><div class="why-desc">Free from harmful additives. Pure, honest henna always</div></div>
+    <div class="why-card"><div class="why-icon">✨</div><div class="why-title">Rich Dark Stain</div><div class="why-desc">Deep, long-lasting colour that develops beautifully overnight</div></div>
+    <div class="why-card"><div class="why-icon">🍃</div><div class="why-title">Fades Naturally</div><div class="why-desc">No peeling, no patches. Fades evenly and gracefully</div></div>
+    <div class="why-card"><div class="why-icon">💐</div><div class="why-title">Made with Passion</div><div class="why-desc">Every design crafted with love, skill and attention to detail</div></div>
+  </div>
+</section>
 <!-- GALLERY -->
 <section id="gallery">
   <div class="section-header">
@@ -585,7 +628,24 @@ Ritu's Dreams and Designs">
     <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1,event)">&#8250;</button>
   </div>
 </section>
-
+<!-- OCCASIONS -->
+<section id="occasions">
+  <div class="section-header">
+    <p class="section-label">We Serve</p>
+    <h2 class="section-title">Our Occasions</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="occasions-grid">
+    <div class="occasion-chip"><span>👰</span> Bridal Mehndi</div>
+    <div class="occasion-chip"><span>🍼</span> Baby Shower</div>
+    <div class="occasion-chip"><span>🌸</span> Puberty Ceremony</div>
+    <div class="occasion-chip"><span>📖</span> Story Telling Mehndi</div>
+    <div class="occasion-chip"><span>🎉</span> Parties</div>
+    <div class="occasion-chip"><span>👥</span> Guest Mehndi</div>
+    <div class="occasion-chip"><span>🥻</span> Saree Draping</div>
+    <div class="occasion-chip"><span>✨</span> All Occasions</div>
+  </div>
+</section>
 <!-- PRICES -->
 <section id="prices">
   <div class="section-header">
@@ -612,7 +672,28 @@ Ritu's Dreams and Designs">
     </div>
   </div>
 </section>
-
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-header">
+    <p class="section-label">Shop With Us</p>
+    <h2 class="section-title">Our Products</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="products-wrap">
+    <p class="products-intro">We don't just do mehndi — we sell the finest natural mehndi products too.<br>Perfect for DIY at home or as a thoughtful gift.</p>
+    <div class="products-grid">
+      <div class="product-card"><div class="product-icon">🌿</div><div class="product-name">Bridal Cone</div></div>
+      <div class="product-card"><div class="product-icon">✏️</div><div class="product-name">Pencil Bridal Cone</div></div>
+      <div class="product-card"><div class="product-icon">🎯</div><div class="product-name">Practice Cone</div></div>
+      <div class="product-card"><div class="product-icon">💅</div><div class="product-name">Nail Cone (Organic)</div></div>
+      <div class="product-card"><div class="product-icon">⚡</div><div class="product-name">Bridal Organic Instant Cone</div></div>
+      <div class="product-card"><div class="product-icon">🔴</div><div class="product-name">Organic Red Henna Dip</div></div>
+      <div class="product-card"><div class="product-icon">🧴</div><div class="product-name">Aftercare Balm</div></div>
+      <div class="product-card"><div class="product-icon">💨</div><div class="product-name">Sealant Spray</div></div>
+    </div>
+    <p class="products-note">To order or enquire, <a href="https://wa.me/919080365438?text=Hi%2C%20I%20am%20interested%20in%20your%20mehndi%20products!" target="_blank">WhatsApp us</a> 💬</p>
+  </div>
+</section>
 <!-- HOW TO BOOK -->
 <section id="booking">
   <div class="section-header">
